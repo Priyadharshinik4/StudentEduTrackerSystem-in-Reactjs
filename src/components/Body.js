@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { GoPersonFill } from "react-icons/go";
 import { BsPersonBadgeFill } from "react-icons/bs";
 import { MdPersonPin } from "react-icons/md";
@@ -8,27 +8,31 @@ import { MdEmail } from "react-icons/md";
 import { MdCoPresent } from "react-icons/md";
 import { FaClinicMedical } from "react-icons/fa";
 
-function Body(){
-    return(
+function Body() {
+    const [count1, setCount1] = useState(8);
+    const [count2, setCount2] = useState(22);
+    const [count3, setCount3] = useState(2);
+
+    return (
         <div className="body">
             <div className="heading">
                 <h1>Student Management System</h1>
             </div>
             <div className="box">
                 <div className="box1 red">
-                    <span><GoPersonFill /></span>
-                    <span></span>
+                    <span className="span"><GoPersonFill /></span>
+                    <span className="number">{count1}</span>
                     <h3>Regular Students</h3>
                 </div>
                 <div className="box1 blue">
-                    <span><BsPersonBadgeFill /></span>
-                    <span></span>
+                    <span className="span"><BsPersonBadgeFill /></span>
+                    <span className="number">{count2}</span>
                     <h3>Remedial Students</h3>
                 </div>
                 <div className="box1 green">
-                    <span><MdPersonPin /></span>
-                    <span></span>
-                    <h3>In Paid clubs</h3>
+                    <span className="span"><MdPersonPin /></span>
+                    <span className="number">{count3}</span>
+                    <h3>In Paid Clubs</h3>
                 </div>
             </div>
             <hr />
@@ -56,7 +60,7 @@ function Body(){
                 </div>
                 <div className="icon1">
                     <span><MdCoPresent /></span>
-                    <h3>Attendence</h3>
+                    <h3>Attendance</h3> 
                 </div>
                 <div className="icon1">
                     <span><FaClinicMedical /></span>
@@ -64,7 +68,7 @@ function Body(){
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Body;
