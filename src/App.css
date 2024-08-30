@@ -47,7 +47,7 @@ body{
 .heading{
   margin: 0;
   padding: 0;
-  background-color: rgb(83, 83, 250);
+  background-color: blue;
 }
 .heading h1{
   margin: 0;
@@ -122,6 +122,10 @@ h2{
 }
 .icon1{
   padding: 25px;
+}
+.icon1:hover{
+  background-color: rgb(240, 240, 240);
+  border-radius: 30px;
 }
 .number{
   font-size: 35px;
